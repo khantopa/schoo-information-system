@@ -1,0 +1,12 @@
+{% extends "schools/admin_base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+
+<h1>Create a Teacher</h1>
+<form  method="post">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  <input type="submit" value="Create" class="btn btn-primary btn-large">
+</form>
+{% endblock content %}
